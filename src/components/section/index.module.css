@@ -1,0 +1,7 @@
+.section {
+  background: var(--purple-card);
+
+  padding: 16px;
+
+  border-radius: 10px;
+}
