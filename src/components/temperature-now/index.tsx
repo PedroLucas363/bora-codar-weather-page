@@ -3,6 +3,8 @@ import Text from "../text";
 import Wind from "../../assets/icons/wind.svg";
 import Water from "../../assets/icons/water.svg";
 import Rain from "../../assets/icons/rain.svg";
+import Pin from "../../assets/icons/pin.svg";
+import Cloudy from "../../assets/images/cloudy.png";
 
 import styles from "./index.module.css";
 
@@ -11,29 +13,35 @@ type Props = {};
 function TemperatureNow({}: Props) {
   return (
     <Section className={styles.temperatureNow}>
-      <Text
-        size={14}
-        lineHeight={17}
-        color="secondary"
-        className={styles.location}
-      >
-        Rio do Sul, SC
-      </Text>
-      <div>
-        <Text size={88} lineHeight={106}>
-          18
-          <Text size={24} lineHeight={29} color="secondary">
-            °C
-          </Text>
+      <img src={Cloudy} alt="cloudy" className={styles.sectionIcon} />
+      <div className={styles.location}>
+        <img src={Pin} alt="pin" />
+        <Text
+          size={14}
+          lineHeight={17}
+          color="secondary"
+          className={styles.location}
+        >
+          Rio do Sul, SC
         </Text>
-        <div>
-          <Text size={20} lineHeight={24}>
-            22°
+      </div>
+      <div className={styles.temperatureContainer}>
+        <div className={styles.temperatureInfos}>
+          <Text size={88} lineHeight={106}>
+            18
           </Text>
-          <Text size={20} lineHeight={24} color="secondary">
-            16°
-          </Text>
+          <div>
+            <Text size={20} lineHeight={24}>
+              22°
+            </Text>
+            <Text size={20} lineHeight={24} color="secondary">
+              16°
+            </Text>
+          </div>
         </div>
+        <Text size={24} lineHeight={29 + 34} color="secondary">
+          °C
+        </Text>
       </div>
       <div className={styles.statistics}>
         <div className={styles.littleSection}>

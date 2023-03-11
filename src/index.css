@@ -15,10 +15,14 @@
   --purple-card: #6d67d0;
   --text-primary: #e7e6fb;
   --text-secondary: #c2bff4;
+  --title: #dad8f7;
   --yellow: #f6c833;
-  --green: #c2bff4;
+  --green: #87ebcd;
+  --white: #ffffff;
 }
 
 body {
   font-size: 1.6rem;
+  background: linear-gradient(228deg, #fccdff 0%, var(--purple-bg) 101.89%)
+    no-repeat fixed;
 }

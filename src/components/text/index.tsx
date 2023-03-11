@@ -1,14 +1,20 @@
 import { CSSProperties } from "react";
 import colors from "../../colors";
 
-const getColor = (color: "primary" | "secondary" | "green") => {
+type colorOptions = "primary" | "secondary" | "title" | "green" | "white";
+
+const getColor = (color: colorOptions) => {
   switch (color) {
     case "primary":
       return colors.textPrimary;
     case "secondary":
       return colors.textSecondary;
+    case "title":
+      return colors.title;
     case "green":
       return colors.green;
+    case "white":
+      return colors.white;
     default:
       return colors.textPrimary;
   }
@@ -19,7 +25,7 @@ type Props = {
   className?: string;
   style?: CSSProperties;
   size?: number;
-  color?: "primary" | "secondary" | "green";
+  color?: colorOptions;
   weight?: number;
   lineHeight?: number;
 };
